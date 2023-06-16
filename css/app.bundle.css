@@ -1,3 +1,130 @@
-body{
-    background-color: aqua;
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap);
+:root {
+    --cerulean: #007090;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem 1.5rem 1rem;
+    border-bottom: 1px solid var(--cerulean);
+}
+
+.header__search-icon-container {
+    padding: 0.5rem 0.7rem 0.5rem 0.5rem;
+    border: 1px solid var(--cerulean);
+    border-right: none;
+    display: flex;
+    border-radius: 5px 0 0 5px;
+}
+
+.header__search-icon-container--icon {
+    cursor: pointer;
+    filter: invert(26%) sepia(38%) saturate(4031%) hue-rotate(171deg) brightness(93%) contrast(104%);
+}
+
+.header__search-input {
+    border: 1px solid var(--cerulean);
+    border-left: none;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    width: 20rem;
+}
+
+.main {
+    display: flex;
+}
+
+.main__categories {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem ;
+}
+
+.main__categories h2{
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--cerulean);
+}
+
+.main__categories__list {
+    border: 1px solid var(--cerulean);
+    border-radius: 5px;
+    padding: 2rem 1.2rem;
+    gap: 0.7rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__categories__list--item {
+    cursor: pointer;
+    position: relative;
+}
+
+.main__categories__list--item::after {
+    content: "";
+    width: 100%;
+    border: 1px solid var(--cerulean);
+    border-bottom: none;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.main__products-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.main__products-container__product {
+    padding: 1rem;
+    border: 1px solid var(--cerulean);
+    border-radius: 5px;
+}
+
+.main__products-container__product img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--cerulean);
+}
+
+.main__products-container__product--item {
+    color: var(--cerulean);
+    font-weight: 600;
+}
+
+.main__products-container__product--item span{
+    color: black;
+    font-weight: 400;
+}
+
+.main__products-container__product--title {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--cerulean);
+    margin-bottom: 0.5rem;
 }
